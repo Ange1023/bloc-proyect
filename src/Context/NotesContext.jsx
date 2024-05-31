@@ -8,13 +8,13 @@ export const NotesContextProvider = (props) =>{
     const [notes, setNotes] = useState([])
 
     useEffect(() =>{
-        setNotes(data)
-    },[]);
+                setNotes(data)
+            },[]);
 
     const addNotes = (note) =>{
         setNotes(
             [...notes, {
-                id: note.id,
+                id: notes.length,
                 title: note.title,
                 description: note.description
             },
@@ -24,9 +24,7 @@ export const NotesContextProvider = (props) =>{
 
     const removeNotes = (noteId) =>{
         setNotes(
-            notes.filter((note) =>{
-                note.id !== noteId
-            })
+            notes.filter(n => n.id !== noteId)
         )
     }
 

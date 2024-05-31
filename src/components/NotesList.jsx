@@ -5,10 +5,11 @@ import { useContext } from "react"
 export const NotesList = () =>{
 
     const {notes} = useContext(NotesContext)
-    return(
+    
+    return(        
         <div>
             {notes.map((note)=>{
-                <Notes note = {note}/>
+                return <Notes key={note.id} note = {note}/>
             })}
         </div>
     )
