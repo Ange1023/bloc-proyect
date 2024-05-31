@@ -1,8 +1,15 @@
 import { Notes } from "./Notes"
+import { NotesContext } from "../Context/NotesContext"
+import { useContext } from "react"
+
 export const NotesList = () =>{
+
+    const {notes} = useContext(NotesContext)
     return(
         <div>
-            <Notes/>
+            {notes.map((note)=>{
+                <Notes note = {note}/>
+            })}
         </div>
     )
 }
