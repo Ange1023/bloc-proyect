@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
 const Modal = ({ show, onClose, children }) => {
@@ -8,8 +10,8 @@ const Modal = ({ show, onClose, children }) => {
     return (
         <div className="modal-backdrop">
             <div className="modal">
-                <button onClick={onClose}>Cerrar</button>
                 {children}
+                <button onClick={onClose}><img src="/closeIcon.svg" alt="Cerrar" /></button>
             </div>
         </div>
     );

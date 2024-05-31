@@ -28,7 +28,7 @@ export const Notes = ({note}) =>{
     };
 
     return (
-        <div>
+        <div className="noteCard">
             {isEditing ? (
                 <div>
                     <input
