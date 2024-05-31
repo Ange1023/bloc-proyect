@@ -28,13 +28,18 @@ export const NotesContextProvider = (props) =>{
         )
     }
 
+    const updateNotes = (id, updatedNote) => {
+        setNotes(notes.map(note => (note.id === id ? { ...note, ...updatedNote } : note)));
+    };
+
     return(
 
         <NotesContext.Provider
             value = {{
                 notes,
                 addNotes,
-                removeNotes
+                removeNotes,
+                updateNotes
             }}
         >
             {props.children}
