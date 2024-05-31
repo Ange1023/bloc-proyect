@@ -19,18 +19,20 @@ export const NotesForm = () =>{
         setDescription(" ");
     }
     return(
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className="notesSub">
             <input 
                 placeholder="Ingrese el titulo"
                 onChange={(e)=>{setTitle(e.target.value)}}
                 value= {title}
+                className="appInput"
             />
             <textarea 
                 placeholder = "Ingrese la descripcion"
                 onChange={(e)=>{setDescription(e.target.value)}}
                 value = {description}
+                className="appText"
             ></textarea>
-            <button>Enviar</button>
+            <button className="submitButton">Enviar</button>
         </form>
     )
 }

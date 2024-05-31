@@ -5,8 +5,8 @@ function App(){
     <main>
       <div className='bar'>
         <section className='logos'>
-        <div className='loginLogo'>Logo login</div>
-        <div className='addNoteLogo'>Add note logo</div>
+        <div className='loginLogo'><img src="/accountLogo.svg" alt="" /></div>
+        <div className='addNoteLogo'><img src="/addLogo.svg" alt="" /></div>
         </section>
       </div>
       <section className='mainSection'>

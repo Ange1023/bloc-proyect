@@ -52,3 +52,25 @@ main{
     height: 100vh;
     text-align: center;
 }
+
+.logos{
+    display: flex;
+}
+
+.notesSub{
+    display: grid;
+    justify-content: center;
+}
+
+.appInput{
+    width: 60%;
+
+}
+
+.appText{
+
+}
+
+.submitButton{
+
+}
