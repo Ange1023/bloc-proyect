@@ -13,11 +13,11 @@ function App(){
 
       <div className='sidebar'>
         <h1>Notes sidebar</h1>
+        <NotesList/>
       </div>
       <div className='textContent'>
       <NotesForm/>
-      <NotesList/>
-        note content
+      
       </div>
       </section>
 

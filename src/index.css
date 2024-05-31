@@ -3,6 +3,7 @@
     --border-rd: 20px;
     --position-test: relative;
     --main-bg-color: rgb(245, 241, 241);
+    --auto-width: auto;
 }
 
 .bar{
@@ -38,6 +39,7 @@
     height: 100vh;
     margin-left: auto;
     border-radius: var(--border-rd);
+    padding: 7px;
 }
 
 .mainSection{
@@ -58,19 +60,30 @@ main{
 }
 
 .notesSub{
+    margin: 10px 0px 0px 0px;
     display: grid;
     justify-content: center;
+    
+    width: var(--auto-width);
+    gap: 13px;
+    padding: 6px;
+    border: var(--test-border);
 }
 
 .appInput{
-    width: 60%;
+    width: var(--auto-width);
 
 }
 
-.appText{
 
+.appText{
+    width: var(--auto-width);
 }
 
 .submitButton{
+    width: var(--auto-width);
+}
 
+.addNoteLogo, .loginLogo{
+    cursor: pointer;
 }
