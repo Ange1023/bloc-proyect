@@ -15,8 +15,8 @@ export const NotesForm = () =>{
             description
             }
         )
-        setTitle(" ");
-        setDescription(" ");
+        setTitle("");
+        setDescription("");
     }
     return(
         <form onSubmit={onSubmit} className="notesSub">
