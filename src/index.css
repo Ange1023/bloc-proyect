@@ -20,10 +20,12 @@
 }
 
 .logos{
+    display: flex;
     position: relative;
     left: 0;
     width: fit-content;
     margin-left: 5px;
+    
 }
 
 .sidebar{
@@ -59,10 +61,6 @@ main{
     text-align: center;
 }
 
-.logos{
-    display: flex;
-}
-
 .notesSub{
     margin: 10px 0px 0px 0px;
     display: grid;
@@ -92,9 +90,10 @@ main{
     cursor: pointer;
 }
 
-.infoText{
+.navBar .logos{
+    flex: 1
 }
 
-.navBar section{
-    flex: 1
+.navBar .infoText{
+    flex: 2
 }
