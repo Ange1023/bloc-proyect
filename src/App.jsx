@@ -1,5 +1,12 @@
+import { NotesList } from "./components/NotesList"
+import { NotesForm } from "./components/NotesForm"
 function App(){
-  return <h1>Hola mundo</h1>
+  return (
+    <>
+      <NotesForm/>
+      <NotesList/>
+    </>
+  )
 }
 
 export default App
