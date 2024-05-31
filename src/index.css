@@ -4,6 +4,7 @@
     --position-test: relative;
     --main-bg-color: rgb(245, 241, 241);
     --auto-width: auto;
+    /* --fuente:  */
 }
 
 .navBar{
@@ -92,7 +93,6 @@ main{
 }
 
 .infoText{
-
 }
 
 .navBar section{
