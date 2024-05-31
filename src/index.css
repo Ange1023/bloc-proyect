@@ -6,12 +6,13 @@
     --auto-width: auto;
 }
 
-.bar{
+.navBar{
     top: 0;
     border: var(--test-border);
     position: var(--position-test);
     border-radius: var(--border-rd);
     height: 35px;
+    text-align: center;
     
 }
 
@@ -63,7 +64,7 @@ main{
     margin: 10px 0px 0px 0px;
     display: grid;
     justify-content: center;
-    
+
     width: var(--auto-width);
     gap: 13px;
     padding: 6px;

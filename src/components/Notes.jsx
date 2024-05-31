@@ -54,10 +54,12 @@ export const Notes = ({note}) =>{
                             console.log(note.id);
                         }}
                     >
-                        Eliminar
+                        <img src="/deleteIcon.svg" alt="Eliminar" />
                     </button>
-                    <button>Ver</button>
-                    <button onClick={handleEditClick}>Editar</button>
+                    <button>
+                        <img src="/previewIcon.svg" alt="Ver"/>
+                    </button>
+                    <button onClick={handleEditClick}> <img src="/editIcon.svg" alt="Editar" /></button>
                 </div>
             )}
         </div>
