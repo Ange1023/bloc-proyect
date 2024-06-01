@@ -29,6 +29,13 @@ body {
     background-color: var(--main-bg-color);
 }
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
 
 .navBar {
     display: flex;
@@ -347,5 +354,22 @@ html, body {
 }
 
 .logIn{
+    height: 30%;
+    border: var(--test-border);
+    /* justify-content: center; */
+}
 
+.logIn form{
+    display: grid;
+    gap: 10px;
+}
+
+.logIn form input{
+    width: 80%;
+    justify-self: center;
+}
+
+.logIn .loginButton{
+    justify-self: center;
+    width: 60%;
 }

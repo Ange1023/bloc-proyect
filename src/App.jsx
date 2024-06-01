@@ -7,13 +7,14 @@ import { LogIn } from './components/LogIn.jsx'
 
 
 function App(){
+  const [auth, setAuth] = useState(false);
   return (
     <main>
       <LogIn/>
-      <section className='PrimeSection'>
-          {/* <NavBar/>
-        <MainSection/>  */}
-      </section>
+      {/* <section className='PrimeSection'>
+          <NavBar/>
+        <MainSection/> 
+      </section> */}
 
     </main>
   )

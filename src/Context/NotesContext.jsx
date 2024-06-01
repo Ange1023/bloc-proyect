@@ -7,6 +7,7 @@ export const NotesContext = createContext()
 export const NotesContextProvider = (props) =>{
 
     const [notes, setNotes] = useState([])
+    
 
     useEffect(() =>{
                 setNotes(data)
