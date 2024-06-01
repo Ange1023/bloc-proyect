@@ -2,17 +2,19 @@
 
 
 
+
+
 :root{
     --test-border: rgb(141, 141, 141) solid;
     --border-rd: 0px;
-    --border-th-test: thin;
+    --border-th-test: 2px;
     --position-test: relative;
     --main-bg-color: white;
     --scdry-color: white;
     --auto-width: auto;
     --font: 'Roboto', sans-serif;
-    --edit-text-color: black;
-    --border-color: rgb(207, 233, 233);
+    --edit-text-color: rgb(26, 16, 48);
+    --border-color: rgb(4, 12, 102);
 }
 
 /* Estilos globales */
@@ -26,7 +28,8 @@ html, body {
 
 body {
     font-family: var(--font);
-    background-color: var(--main-bg-color);
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
 main{
@@ -108,6 +111,7 @@ main{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color:white
 }
 
 .submitButton:hover {
@@ -139,15 +143,6 @@ main{
     z-index: 1000;
 }
 
-.noteCard {
-    background-color: rgb(95, 95, 95);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.noteCard:hover {
-    background-color: rgb(204, 204, 204);
-}
 
 .modal {
     background-color: white;
@@ -186,8 +181,9 @@ main{
     border-radius: var(--border-rd);
     border-width: var(--border-th-test);
     overflow: auto;
-    border-width: thin;
+    border-width: var(--border-th-test) ;
     padding: 5px;
+    border-color: var(--border-color);
 }
 
 .textContent{
@@ -195,6 +191,7 @@ main{
     border: var(--test-border);
     position: var(--position-test);
     border-width: var(--border-th-test);
+    border-color: var(--border-color);
     width: 69%;
     margin-left: auto;
     border-radius: var(--border-rd);
@@ -214,23 +211,24 @@ html, body {
 
 .PrimeSection {
     display: grid;
-    height: 80%; /* Ocupar toda la altura del viewport */
+    height: 80%; 
     text-align: center;
     width: 95%;
-    grid-template-rows: auto 1fr; /* La primera fila se ajusta automáticamente (navBar) y la segunda ocupa el resto del espacio */
+    grid-template-rows: auto 1fr; 
 }
 
 .navBar {
     display: flex;
     border: var(--test-border);
-    position: relative; /* Asegura que la posición es relativa al contenedor padre */
+    position: relative; 
     border-radius: var(--border-rd);
     border-width: var(--border-th-test);
     height: 45px;
+    border-color: var(--border-color);
     color: var(--edit-text-color);
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ocupar todo el ancho del elemento main */
+    width: 100%; 
 }
 
 .mainSection {
@@ -295,11 +293,11 @@ html, body {
 }
 
 .submitButton{
-    background-color: rgb(32, 255, 32);
+    background-color: rgb(39, 82, 125);
     width: 50%;
     justify-self: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 5em;
     cursor: pointer;
 }
 
@@ -332,8 +330,10 @@ html, body {
 }
 
 .noteCard{
-    background-color: rgb(95, 95, 95);
+    background-color: rgb(181, 194, 212);
     border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
 }
 
 .noteCard:hover{
@@ -360,17 +360,23 @@ html, body {
 .logIn{
     height: 30%;
     border: var(--test-border);
+    background-color: white;
+    border-radius: 10px;
+
     /* justify-content: center; */
 }
 
 .logIn form{
     display: grid;
     gap: 10px;
+    padding: 10px;
 }
 
 .logIn form input{
     width: 80%;
     justify-self: center;
+    border-width: 1.5px;
+    border-style: groove;
 }
 
 .logIn .loginButton{

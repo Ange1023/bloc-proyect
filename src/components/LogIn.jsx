@@ -4,14 +4,18 @@ import { usuarios } from "../Data/usersData"
 import { useState } from "react"
 
 export function LogIn ({loginSucces}) {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('');
+
     const handleClick = (e)=>{
         e.preventDefault()
 
         const loginSecurity = (username, password)=>{
-            console.log(username);
-            console.log(password)
+            console.log(`user encontrado: ${username}`);
+            console.log(`password encontrada: ${password}`)
             const foundUser = username === usuarios.find(user => user.user === username).user
-            const foundPwd = password === usuarios.find(user => user.password).password
+            const foundPwd = password === usuarios.find(user => user.password === password).password
             console.log(usuarios.find(user => user.user))
             console.log(usuarios.find(user => user.password))
             console.log(`encontro el user? ${foundUser}`)
@@ -43,9 +47,6 @@ export function LogIn ({loginSucces}) {
             console.log(`logro iniciar sesion? ${isValid}`);
     }
 
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    const [error, setError] = useState('');
 
     
     
@@ -64,7 +65,7 @@ export function LogIn ({loginSucces}) {
                 onChange={(e)=>setUsername(e.target.value)}
                 />
 
-                <input type="text" 
+                <input type="password" 
                 name="pwd" 
                 required 
                 placeholder="Introduzca su contraseña"

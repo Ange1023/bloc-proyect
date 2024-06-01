@@ -9,6 +9,6 @@ export const usuarios = [
     },
     {
         'user' : 'MarioG',
-        'password' : 'lesvoyaponer20'
+        'password': 'lesvoyaponer20'
     }
 ]
