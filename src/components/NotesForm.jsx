@@ -7,13 +7,22 @@ export const NotesForm = () =>{
     const[description, setDescription] = useState('')
     const {addNotes} = useContext(NotesContext)
 
+    const checkContent = ({title, description})=>{
+        console.log(title)
+        console.log(description)
+        if(title === '' && description === ''){
+            return
+        }else if(title === ''){
+            console.log('estoy en el else if')
+            return {title: 'Sin titulo', description} 
+        }
+        return {title, description}
+    }
+
     const onSubmit = (event) =>{
         event.preventDefault()
         addNotes(
-            {
-            title,
-            description
-            }
+            checkContent({title, description})
         )
         setTitle("");
         setDescription("");
@@ -32,6 +41,15 @@ export const NotesForm = () =>{
                 value = {description}
                 className="appText"
             ></textarea>
+            {
+                title === '' && description === '' && (
+                    <div style={{
+                        color: 'red'
+                    }}>
+                        Contenio vacio, por favor ingrese texto
+                    </div>
+                )
+            }
             <button className="submitButton">Enviar</button>
         </form>
     )

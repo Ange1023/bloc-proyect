@@ -8,10 +8,24 @@ export const NotesContextProvider = (props) =>{
 
     const [notes, setNotes] = useState([])
     
+    // const localStr = window.localStorage;
 
-    useEffect(() =>{
-                setNotes(data)
-            },[]);
+    
+  useEffect(() => {
+    const storedNotes = JSON.parse(window.localStorage.getItem('notes'));
+    if (storedNotes) {
+      setNotes(storedNotes);
+    } else {
+      setNotes(data);
+      window.localStorage.setItem('notes', JSON.stringify(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
+
+
 
     const addNotes = (note) =>{
         setNotes(
