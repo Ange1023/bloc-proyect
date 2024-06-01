@@ -49,7 +49,7 @@ export const Notes = ({note}) =>{
                 <div>
                     <h1>{note.title}</h1>
                     <p>{note.description}</p>
-                    <p>{note.id}</p>
+                    {/* <p>{note.id}</p> */}
                     <button
                         onClick={() => {removeNotes(note.id);}}
                     >
@@ -64,7 +64,7 @@ export const Notes = ({note}) =>{
             <Modal show={isViewing} onClose={()=>{setIsViewing(false);}}>
                 <h1>{note.title}</h1>
                 <p>{note.description}</p>
-                <p>{note.id}</p>
+                {/* <p>{note.id}</p> */}
             </Modal>
         </div>
     );

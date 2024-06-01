@@ -193,7 +193,6 @@ main {
     position: var(--position-test);
     border-width: var(--border-th-test);
     width: 69%;
-    height: fit-content;
     margin-left: auto;
     border-radius: var(--border-rd);
     padding: 7px;
@@ -235,7 +234,8 @@ main {
     position: relative;
     display: flex;
     width: 100%;
-    height: fit-content; 
+    height: 100%;
+    /* height: fit-content;  */
 }
 
 .notesForm{
