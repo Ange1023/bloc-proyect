@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 :root{
     --test-border: red solid;
-    --border-rd: 20px;
+    --border-rd: 0px;
+    --border-th-test: thin;
     --position-test: relative;
     --main-bg-color: rgb(245, 241, 241);
     --auto-width: auto;
-    /* --fuente:  */
+    --font: 'Roboto', sans-serif; 
 }
 
 .navBar{
@@ -13,6 +16,7 @@
     border: var(--test-border);
     position: var(--position-test);
     border-radius: var(--border-rd);
+    border-width: var(--border-th-test);
     height: 45px;
     justify-content: center;
     align-items: center;
@@ -35,12 +39,17 @@
     width: 30%;
     height: 100vh;
     border-radius: var(--border-rd);
+    border-width: var(--border-th-test);
+
+    border-width: thin;
+    padding: 5px;
 }
 
 .textContent{
     right: 0;
     border: var(--test-border);
     position: var(--position-test);
+    border-width: var(--border-th-test);
     width: 69%;
     height: 100vh;
     margin-left: auto;
@@ -48,33 +57,34 @@
     padding: 7px;
 }
 
-.mainSection{
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
+
 
 main{
     display: grid;
-    gap: 15px;
-    height: 100vh;
+    /* gap: 15px; */
+    height: 100%;
     text-align: center;
+    /* border: var(--test-border); */
 }
 
-.notesSub{
+.notesForm{
     margin: 10px 0px 0px 0px;
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.6fr 0.1fr;
     width: var(--auto-width);
     gap: 13px;
     padding: 6px;
     border: var(--test-border);
+    border-width: var(--border-th-test);
+    height: 400px;
 }
 
 .appInput{
+    display: grid;
     width: var(--auto-width);
-
+    height: auto
 }
 
 
@@ -83,7 +93,16 @@ main{
 }
 
 .submitButton{
-    width: var(--auto-width);
+    background-color: rgb(32, 255, 32);
+    width: 50%;
+    justify-self: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitButton:hover{
+    background-color: rgb(94, 255, 94);
 }
 
 .addNoteLogo, .loginLogo{
@@ -110,10 +129,40 @@ main{
     z-index: 1000;
 }
 
+.noteCard{
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.noteCard:hover{
+    background-color: azure;
+}
+
 .modal {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1001;
+}
+
+
+main .mainSection{
+    position: static;
+    overflow: hidden;
+    display: flex;
+    /* height: 100vh; */
+    width: 100%;
+}
+
+#root{
+    height: 100vh;
+    top: 0;
+
+}
+
+body{
+    margin: 0;
+    font-family: var(--font);
+    background-color: rgb(184, 185, 185);
 }

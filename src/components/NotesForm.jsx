@@ -19,7 +19,7 @@ export const NotesForm = () =>{
         setDescription("");
     }
     return(
-        <form onSubmit={onSubmit} className="notesSub">
+        <form onSubmit={onSubmit} className="notesForm">
             <input 
                 placeholder="Ingrese el titulo"
                 onChange={(e)=>{setTitle(e.target.value)}}
