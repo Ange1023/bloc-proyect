@@ -29,14 +29,6 @@ body {
     background-color: var(--main-bg-color);
 }
 
-main {
-    display: grid;
-    height: 80%; /* Ocupar toda la altura del viewport */
-    text-align: center;
-    width: 80%; /* Ocupar el 80% del ancho del body */
-    margin: 0 auto; /* Centrar el main horizontalmente */
-    grid-template-rows: auto 1fr; /* La primera fila se ajusta automáticamente (navBar) y la segunda ocupa el resto del espacio */
-}
 
 .navBar {
     display: flex;
@@ -209,7 +201,7 @@ html, body {
     grid-template-columns: 1fr;
 }
 
-main {
+.PrimeSection {
     display: grid;
     height: 80%; /* Ocupar toda la altura del viewport */
     text-align: center;
@@ -354,3 +346,6 @@ main {
 
 }
 
+.logIn{
+
+}
